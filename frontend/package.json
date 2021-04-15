@@ -2,12 +2,12 @@
   "name": "with-typescript",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc",
     "dep": "cd ../common && npm run build",
-    "link": "npm link ../common"
+    "link": "npm link ../common",
+    "dev": "next",
+    "build": "npm run dep && npm run link && next build",
+    "start": "next start",
+    "type-check": "tsc"
   },
   "dependencies": {
     "next": "latest",
