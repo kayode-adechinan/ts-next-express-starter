@@ -1,0 +1,70 @@
+### Create account
+POST http://localhost:3000/api/v1/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "email": "email5@gmail.com",
+    "password": "password5"
+}
+
+
+### Login
+
+POST http://localhost:3000/api/v1/users/signin HTTP/1.1
+content-type: application/json
+
+{
+    "email": "email2@gmail.com",
+    "password": "password2"
+}
+
+
+
+
+### Update Profile
+PUT http://localhost:3000/api/v1/users/me HTTP/1.1
+content-type: application/json
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjE4NTg1MDgwLCJleHAiOjE2MTg2NzE0ODB9._MY65Dk95PuycDImScdeUNfhQS2losbhBKjcb_IucKQ
+
+{
+    "first_name": "momo"
+}
+
+
+
+
+### Get user info
+GET http://localhost:3000/api/v1/users/me HTTP/1.1
+content-type: application/json
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjE4NTg1MDgwLCJleHAiOjE2MTg2NzE0ODB9._MY65Dk95PuycDImScdeUNfhQS2losbhBKjcb_IucKQ
+
+
+
+### Test email sending
+GET http://localhost:3000/api/v1/users/emailme HTTP/1.1
+content-type: application/json
+
+
+### Test email sending with nodemailer
+GET http://localhost:3000/api/v1/users/bettermail HTTP/1.1
+content-type: application/json
+
+
+
+### Test email with html template
+
+GET http://localhost:3000/api/v1/users/bettermailV2 HTTP/1.1
+content-type: application/json
+
+
+### Create an item
+
+POST http://localhost:3000/api/v1/items HTTP/1.1
+content-type: application/json
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjE4NTc5NjQwLCJleHAiOjE2MTg2NjYwNDB9.WVstTjzSC5uB2MsRw4freIG0DgYxrQic3j0ACKgahs0
+
+{
+    "title": "item title"
+}
+
+
